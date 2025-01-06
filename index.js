@@ -17,7 +17,7 @@ const args = [
 ];
 
 const browser = await puppeteer.launch({
-    headless: false,
+    headless: "new",
     args,
     ignoreHTTPSErrors: true,
 });

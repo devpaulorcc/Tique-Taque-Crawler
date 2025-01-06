@@ -2,12 +2,12 @@ import fs from "fs";
 import util from "util";
 
 export const getCurrentTime = () => {
-    let date_ob = new Date();
+    let date = new Date();
 
-    let hours = date_ob.getHours();
-    let minutes = date_ob.getMinutes();
+    let hours = date.getHours().toString();
+    let minutes = date.getMinutes().toString();
 
-    return hours + ":" + minutes;
+    return hours.padStart(2, '0') + ":" + minutes.padStart(2, '0');
 }
 
 export const report = (msg) => {
