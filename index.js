@@ -55,15 +55,17 @@ await page.locator('button#btn-remote-record').click();
 
 let tries = 0;
 while(tries <= MAX_TRIES) {
-    await setTimeout(5000);
+    await setTimeout(3000);
     tries++;
 
     try {
-        //await page.locator('button#btn-save-location').click();
+        await page.locator('button#btn-save-location').click();
+
+        await setTimeout(2000);
 
         break;
     } catch(error) {
-        console.log(error);
+        report(error);
         page.reload();
     }
 }
