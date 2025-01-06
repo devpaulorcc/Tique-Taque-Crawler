@@ -6,7 +6,6 @@ import { getCurrentTime, report } from './helpers.js';
 const URL = 'https://www.tiquetaque.app/';
 const LATITUDE = -23.666220;
 const LONGITUDE = -46.807516;
-const MAX_TRIES = 5;
 
 // STEP 1 - SETUP
 
@@ -53,22 +52,11 @@ await setTimeout(2000);
 
 await page.locator('button#btn-remote-record').click();
 
-let tries = 0;
-while(tries <= MAX_TRIES) {
-    await setTimeout(3000);
-    tries++;
+await setTimeout(3000);
 
-    try {
-        await page.locator('button#btn-save-location').click();
+await page.locator('button#btn-save-location').click();
 
-        await setTimeout(2000);
-
-        break;
-    } catch(error) {
-        report(error);
-        page.reload();
-    }
-}
+await setTimeout(2000);
 
 report("check-in at " + getCurrentTime());
 
