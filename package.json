@@ -1,0 +1,24 @@
+{
+  "name": "tique-taque-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoungC0DE/Tique-Taque-Crawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoungC0DE/Tique-Taque-Crawler/issues"
+  },
+  "homepage": "https://github.com/YoungC0DE/Tique-Taque-Crawler#readme",
+  "dependencies": {
+    "env-var": "^7.5.0",
+    "puppeteer": "^23.11.1",
+    "puppeteer-core": "^23.11.1"
+  },
+  "type": "module"
+}
